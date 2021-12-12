@@ -98,6 +98,7 @@ public class Actions {
 
     public static void dig(Account account){
         if(account.getShovel() == true){
+            int ranodm = (int) Math.floor(Math.random() * (100 - 1 + 1) + 1);
 
         }
         else{
@@ -105,6 +106,8 @@ public class Actions {
         }
 
     }
+
+
     public static void main(String []args){
 
     }

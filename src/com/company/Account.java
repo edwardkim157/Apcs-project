@@ -27,6 +27,7 @@ public class Account {
     }
 
     public int wormsBalance(){
+
         return wormsBalance;
     }
 
@@ -64,7 +65,6 @@ public class Account {
         }
         return shovel;
     }
-
     public boolean buyFishingRod() {
         if (balance > 1000.0) {
             balance -= 1000.0;
