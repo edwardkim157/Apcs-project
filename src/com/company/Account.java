@@ -15,7 +15,6 @@ public class Account {
     public Account(String name){
         this.name = name;
         balance = 0;
-        luck = false;
         padlock = false;
         fishingRod = false;
         shovel = false;
@@ -27,7 +26,7 @@ public class Account {
     }
 
     public int wormsBalance(){
-
+        System.out.println("You have " + wormsBalance + " amount of fish");
         return wormsBalance;
     }
 
@@ -39,10 +38,6 @@ public class Account {
         else{
             System.out.println("Not enough money on account to buy luck");
         }
-        return luck;
-    }
-
-    public boolean getLuck(){
         return luck;
     }
 
@@ -88,7 +83,12 @@ public class Account {
     public void subtractBalance(double money){
         balance -= money;
     }
-
+    public void subtractFishBalance(int x){
+        fishBalance -= x;
+    }
+    public void subtractWormBalance(int x){
+        wormsBalance -= x;
+    }
     public String getName(){
         return name;
     }
