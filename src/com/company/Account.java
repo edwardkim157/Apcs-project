@@ -7,7 +7,7 @@ public class Account {
     private double balance;
     private boolean luck;
     private boolean padlock;
-    private boolean fishingRod;
+    private static boolean fishingRod;
     private boolean shovel;
     private int fishBalance;
     private int wormsBalance;
@@ -46,12 +46,17 @@ public class Account {
         return luck;
     }
 
-    public boolean getFishingRod(){
+    public static boolean getFishingRod(){
         return fishingRod;
     }
 
     public boolean getShovel(){
         return shovel;
+    }
+
+    public boolean setFishingRod(boolean fishing){
+        fishingRod = fishing;
+        return fishing;
     }
 
     public boolean buyShovel(){
@@ -65,10 +70,10 @@ public class Account {
         }
         return shovel;
     }
-    public boolean buyFishingRod() {
-        if (balance > 1000.0) {
-            balance -= 1000.0;
-            fishingRod = true;
+    public boolean buyFishingRod(Account account) {
+        if (account.getBalance() > 1000.0) {
+            account.subtractBalance(1000);;
+            account.setFishingRod(true);
             System.out.println("You bought a fishing rod");
         } else {
             System.out.println("You're too broke for a fishing rod!");
@@ -76,20 +81,12 @@ public class Account {
         return fishingRod;
     }
 
-    public boolean getPadlock(){
-        if(balance>2500.0){
-            balance -= 2500.0;
-            padlock = true;
-        }
-
-        else{
-            System.out.println("Not enough money for padlock :/");
-        }
-        return padlock;
-    }
-
     public void addBalance(double money) {
         balance+= money;
+    }
+
+    public void subtractBalance(double money){
+        balance -= money;
     }
 
     public String getName(){

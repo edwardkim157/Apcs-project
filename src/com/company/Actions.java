@@ -45,7 +45,7 @@ public class Actions {
             System.out.println("You win! Money has been added to your account");
             account.addBalance(salary);
         }
-
+        System.out.println("hi");
         while (playertotal < 21 && computertotal < 21) { //condition for playing the game (player's cards are less than 21)
             JOptionPane.showMessageDialog(null, "Your number is " + playertotal + " please type whether or not you would like to hit, stand, or forefit");
             String decision = JOptionPane.showInputDialog("please enter what you would like to do", "Input");
@@ -79,7 +79,7 @@ public class Actions {
     }
 
     public static void fish(Account account) {
-        if (account.getFishingRod() == true) {
+        if (account.getFishingRod()) {
             int rand = (int) Math.floor(Math.random() * (10 - 1 + 1) + 1);
             if (rand <= 6) {
                 account.setFishBalance(2);
