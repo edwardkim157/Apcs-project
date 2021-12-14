@@ -1,3 +1,10 @@
+/**
+ * Class name: AP computer science
+ * Purpose of the class: To create a fun money making game with minigames incorporated into it
+ * Author: Edward Kim
+ * Teacher’s name: Nabiha Khan
+ * Date: December 3rd - December 15th
+ */
 package com.company;
 import javax.swing.*;
 import java.net.SocketOption;
